@@ -20,9 +20,9 @@ export function RepairTracker() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-[#3B82F6] text-sm font-semibold tracking-wider uppercase">Real-Time Updates</span>
+          <span className="text-[#06B6D4] text-sm font-semibold tracking-wider uppercase">Real-Time Updates</span>
           <h2 className="text-3xl sm:text-4xl font-black mt-2 tracking-tight">
-            Track Your Repair <span className="text-[#2563EB]">Live</span>
+            Track Your Repair <span className="text-[#0891B2]">Live</span>
           </h2>
           <p className="text-[#94A3B8] mt-3 max-w-lg mx-auto">
             Your device, tracked live — from drop-off to done. Get real-time status updates via SMS and our online portal.
@@ -41,7 +41,7 @@ export function RepairTracker() {
               <p className="text-sm text-[#94A3B8]">Repair #MW-2847</p>
               <p className="font-bold">iPhone 15 Pro — Screen Replacement</p>
             </div>
-            <span className="px-3 py-1 bg-[#2563EB]/10 text-[#3B82F6] text-xs font-semibold rounded-full">
+            <span className="px-3 py-1 bg-[#0891B2]/10 text-[#06B6D4] text-xs font-semibold rounded-full">
               In Progress
             </span>
           </div>
@@ -56,13 +56,13 @@ export function RepairTracker() {
                 )}
                 <div className={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center ${
                   s.status === "complete" ? "bg-[#22C55E]" :
-                  s.status === "active" ? "bg-[#2563EB] ring-4 ring-[#2563EB]/20" :
+                  s.status === "active" ? "bg-[#0891B2] ring-4 ring-[#0891B2]/20" :
                   "bg-white/10"
                 }`}>
                   <s.icon className="w-5 h-5 text-white" />
                 </div>
                 <span className={`text-xs mt-2 font-medium ${
-                  s.status === "active" ? "text-[#3B82F6]" :
+                  s.status === "active" ? "text-[#06B6D4]" :
                   s.status === "complete" ? "text-[#22C55E]" :
                   "text-[#94A3B8]"
                 }`}>{s.label}</span>

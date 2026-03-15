@@ -20,7 +20,7 @@ function ReviewCard({ review }: { review: typeof REVIEWS[number] }) {
       <p className="text-sm text-[#94A3B8] leading-relaxed mb-4">&ldquo;{review.text}&rdquo;</p>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-[#2563EB]/20 flex items-center justify-center text-xs font-bold text-[#3B82F6]">
+          <div className="w-8 h-8 rounded-full bg-[#0891B2]/20 flex items-center justify-center text-xs font-bold text-[#06B6D4]">
             {review.name.charAt(0)}
           </div>
           <span className="text-sm font-medium">{review.name}</span>
@@ -43,11 +43,11 @@ export function Reviews() {
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
         >
-          <span className="text-[#3B82F6] text-sm font-semibold tracking-wider uppercase">Reviews</span>
+          <span className="text-[#06B6D4] text-sm font-semibold tracking-wider uppercase">Reviews</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mt-2 tracking-tight">
             What Our Customers
             <br />
-            <span className="text-[#2563EB]">Say About Us</span>
+            <span className="text-[#0891B2]">Say About Us</span>
           </h2>
           <div className="flex items-center gap-2 mt-4">
             <div className="flex items-center gap-0.5">

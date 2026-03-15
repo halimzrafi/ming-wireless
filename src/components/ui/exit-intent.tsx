@@ -48,8 +48,8 @@ export function ExitIntent() {
                 <X className="w-4 h-4 text-[#94A3B8]" />
               </button>
 
-              <div className="w-16 h-16 rounded-2xl bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-5">
-                <Zap className="w-8 h-8 text-[#3B82F6]" />
+              <div className="w-16 h-16 rounded-2xl bg-[#0891B2]/10 flex items-center justify-center mx-auto mb-5">
+                <Zap className="w-8 h-8 text-[#06B6D4]" />
               </div>
 
               <h3 className="text-2xl font-black mb-2">Before You Go!</h3>
@@ -60,7 +60,7 @@ export function ExitIntent() {
               <Link
                 href="/quote"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center gap-2 w-full py-3.5 bg-[#2563EB] hover:bg-[#3B82F6] text-white font-bold rounded-full transition-all glow-shadow mb-3"
+                className="flex items-center justify-center gap-2 w-full py-3.5 bg-[#0891B2] hover:bg-[#06B6D4] text-white font-bold rounded-full transition-all glow-shadow mb-3"
               >
                 Get Free Estimate
               </Link>

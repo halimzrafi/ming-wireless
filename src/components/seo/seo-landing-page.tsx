@@ -29,7 +29,7 @@ export function SEOLandingPage({ h1, subtitle, intro, services, models }: SEOLan
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
                 {h1.split(" ").slice(0, -1).join(" ")}{" "}
-                <span className="text-[#2563EB]">{h1.split(" ").slice(-1)}</span>
+                <span className="text-[#0891B2]">{h1.split(" ").slice(-1)}</span>
               </h1>
               <p className="text-xl text-[#94A3B8] mt-3 font-medium">{subtitle}</p>
               <p className="text-[#94A3B8] mt-6 leading-relaxed">{intro}</p>
@@ -37,7 +37,7 @@ export function SEOLandingPage({ h1, subtitle, intro, services, models }: SEOLan
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
                   href="/quote"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#2563EB] hover:bg-[#3B82F6] text-white font-bold rounded-full transition-all glow-shadow"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#0891B2] hover:bg-[#06B6D4] text-white font-bold rounded-full transition-all glow-shadow"
                 >
                   Get Instant Quote
                 </Link>
@@ -73,7 +73,7 @@ export function SEOLandingPage({ h1, subtitle, intro, services, models }: SEOLan
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-black tracking-tight mb-8">
-              Our <span className="text-[#2563EB]">Pricing</span>
+              Our <span className="text-[#0891B2]">Pricing</span>
             </h2>
 
             <div className="bg-[#1E293B]/50 border border-white/5 rounded-2xl overflow-hidden">
@@ -105,7 +105,7 @@ export function SEOLandingPage({ h1, subtitle, intro, services, models }: SEOLan
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-black tracking-tight mb-6">
-              Models We <span className="text-[#2563EB]">Repair</span>
+              Models We <span className="text-[#0891B2]">Repair</span>
             </h2>
             <div className="flex flex-wrap gap-2">
               {models.map((model) => (
@@ -132,7 +132,7 @@ export function SEOLandingPage({ h1, subtitle, intro, services, models }: SEOLan
               { icon: CheckCircle2, title: "Lifetime Warranty", desc: "Every repair backed for life" },
             ].map((item) => (
               <div key={item.title} className="bg-[#1E293B]/50 border border-white/5 rounded-2xl p-6 text-center">
-                <item.icon className="w-8 h-8 text-[#3B82F6] mx-auto mb-3" />
+                <item.icon className="w-8 h-8 text-[#06B6D4] mx-auto mb-3" />
                 <h3 className="font-bold mb-1">{item.title}</h3>
                 <p className="text-sm text-[#94A3B8]">{item.desc}</p>
               </div>

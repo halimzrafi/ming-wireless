@@ -31,7 +31,7 @@ export function AboutPageClient() {
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight">
-              About <span className="text-[#2563EB]">Ming Wireless</span>
+              About <span className="text-[#0891B2]">Ming Wireless</span>
             </h1>
             <p className="text-xl text-[#94A3B8] mt-4 max-w-2xl mx-auto leading-relaxed">
               Since 2019, we&apos;ve been downtown Toronto&apos;s go-to repair shop for phones, tablets, and laptops.
@@ -50,7 +50,7 @@ export function AboutPageClient() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.45 }}
               >
-                <value.icon className="w-8 h-8 text-[#3B82F6] mb-4" />
+                <value.icon className="w-8 h-8 text-[#06B6D4] mb-4" />
                 <h3 className="text-lg font-bold mb-2">{value.title}</h3>
                 <p className="text-sm text-[#94A3B8] leading-relaxed">{value.description}</p>
               </motion.div>
@@ -65,7 +65,7 @@ export function AboutPageClient() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-black tracking-tight text-center mb-12">
-              Our <span className="text-[#2563EB]">Journey</span>
+              Our <span className="text-[#0891B2]">Journey</span>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {milestones.map((milestone, i) => (
@@ -77,7 +77,7 @@ export function AboutPageClient() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <span className="text-4xl font-black text-[#2563EB]/20">{milestone.year}</span>
+                  <span className="text-4xl font-black text-[#0891B2]/20">{milestone.year}</span>
                   <h3 className="text-lg font-bold mt-2">{milestone.title}</h3>
                   <p className="text-sm text-[#94A3B8] mt-1">{milestone.description}</p>
                 </motion.div>
@@ -95,8 +95,8 @@ export function AboutPageClient() {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <Building2 className="w-5 h-5 text-[#3B82F6]" />
-                  <span className="text-[#3B82F6] text-sm font-semibold tracking-wider uppercase">Corporate & Warranty</span>
+                  <Building2 className="w-5 h-5 text-[#06B6D4]" />
+                  <span className="text-[#06B6D4] text-sm font-semibold tracking-wider uppercase">Corporate & Warranty</span>
                 </div>
                 <h2 className="text-3xl font-black tracking-tight mb-4">
                   Authorized Warranty Repair Partner
@@ -107,7 +107,7 @@ export function AboutPageClient() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-[#2563EB] hover:bg-[#3B82F6] text-white font-semibold rounded-full transition-all glow-shadow"
+                  className="inline-flex items-center px-6 py-3 bg-[#0891B2] hover:bg-[#06B6D4] text-white font-semibold rounded-full transition-all glow-shadow"
                 >
                   Partner With Us
                 </Link>
@@ -131,7 +131,7 @@ export function AboutPageClient() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-black tracking-tight mb-4">
-              Awards & <span className="text-[#2563EB]">Media</span>
+              Awards & <span className="text-[#0891B2]">Media</span>
             </h2>
             <p className="text-[#94A3B8] mb-8">Recognition and features</p>
             {/* Placeholder for media logos */}
@@ -141,7 +141,7 @@ export function AboutPageClient() {
                   key={badge}
                   className="px-6 py-3 bg-[#1E293B]/50 border border-white/5 rounded-xl text-sm text-[#94A3B8] font-medium"
                 >
-                  <Star className="w-4 h-4 inline-block mr-2 text-[#3B82F6]" />
+                  <Star className="w-4 h-4 inline-block mr-2 text-[#06B6D4]" />
                   {badge}
                 </div>
               ))}

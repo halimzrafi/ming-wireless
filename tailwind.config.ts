@@ -16,8 +16,8 @@ const config: Config = {
           light: "#1E293B",
         },
         electric: {
-          DEFAULT: "#2563EB",
-          glow: "#3B82F6",
+          DEFAULT: "#0891B2",
+          glow: "#06B6D4",
         },
         slate: {
           50: "#F8FAFC",

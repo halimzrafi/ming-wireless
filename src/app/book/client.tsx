@@ -87,7 +87,7 @@ export function BookingPageClient() {
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-4xl sm:text-5xl font-black tracking-tight">
-              Book Your <span className="text-[#2563EB]">Repair</span>
+              Book Your <span className="text-[#0891B2]">Repair</span>
             </h1>
             <p className="text-[#94A3B8] mt-3 max-w-lg mx-auto">
               Reserve your spot and skip the wait. Walk-ins are always welcome too!
@@ -117,7 +117,7 @@ export function BookingPageClient() {
               {/* Date picker */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <Calendar className="w-4 h-4 text-[#3B82F6]" />
+                  <Calendar className="w-4 h-4 text-[#06B6D4]" />
                   <p className="text-sm font-semibold">Select Date</p>
                 </div>
                 <div className="grid grid-cols-4 sm:grid-cols-7 gap-2">
@@ -126,7 +126,7 @@ export function BookingPageClient() {
                       key={d.value}
                       className={`flex flex-col items-center py-3 px-2 rounded-xl border cursor-pointer transition-all text-center ${
                         selectedDate === d.value
-                          ? "bg-[#2563EB]/10 border-[#2563EB] text-white"
+                          ? "bg-[#0891B2]/10 border-[#0891B2] text-white"
                           : "bg-white/5 border-white/10 text-[#94A3B8] hover:border-white/20"
                       }`}
                     >
@@ -142,14 +142,14 @@ export function BookingPageClient() {
               {/* Time slots */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <Clock className="w-4 h-4 text-[#3B82F6]" />
+                  <Clock className="w-4 h-4 text-[#06B6D4]" />
                   <p className="text-sm font-semibold">Select Time</p>
                 </div>
                 <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
                   {timeSlots.map((time) => (
                     <label
                       key={time}
-                      className="flex items-center justify-center py-2.5 px-2 rounded-xl border cursor-pointer transition-all text-xs font-medium bg-white/5 border-white/10 text-[#94A3B8] hover:border-white/20 has-[:checked]:bg-[#2563EB]/10 has-[:checked]:border-[#2563EB] has-[:checked]:text-white"
+                      className="flex items-center justify-center py-2.5 px-2 rounded-xl border cursor-pointer transition-all text-xs font-medium bg-white/5 border-white/10 text-[#94A3B8] hover:border-white/20 has-[:checked]:bg-[#0891B2]/10 has-[:checked]:border-[#0891B2] has-[:checked]:text-white"
                     >
                       <input type="radio" value={time} {...register("time")} className="sr-only" />
                       {time}
@@ -164,7 +164,7 @@ export function BookingPageClient() {
                 <div>
                   <select
                     {...register("device")}
-                    className="w-full px-3 py-3.5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors text-[#94A3B8]"
+                    className="w-full px-3 py-3.5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors text-[#94A3B8]"
                   >
                     <option value="">Select Device</option>
                     <option value="iphone">iPhone</option>
@@ -181,7 +181,7 @@ export function BookingPageClient() {
                     <input
                       {...register("issue")}
                       placeholder=" "
-                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
                     />
                     <label>Issue (e.g., cracked screen)</label>
                   </div>
@@ -195,7 +195,7 @@ export function BookingPageClient() {
                   <input
                     {...register("name")}
                     placeholder=" "
-                    className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+                    className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
                   />
                   <label>Full Name</label>
                 </div>
@@ -204,7 +204,7 @@ export function BookingPageClient() {
                     {...register("email")}
                     type="email"
                     placeholder=" "
-                    className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+                    className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
                   />
                   <label>Email</label>
                 </div>
@@ -213,7 +213,7 @@ export function BookingPageClient() {
                     {...register("phone")}
                     type="tel"
                     placeholder=" "
-                    className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+                    className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
                   />
                   <label>Phone</label>
                 </div>
@@ -222,7 +222,7 @@ export function BookingPageClient() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#2563EB] hover:bg-[#3B82F6] disabled:opacity-50 text-white font-bold rounded-full transition-all glow-shadow"
+                className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#0891B2] hover:bg-[#06B6D4] disabled:opacity-50 text-white font-bold rounded-full transition-all glow-shadow"
               >
                 {isSubmitting ? (
                   <Loader2 className="w-5 h-5 animate-spin" />

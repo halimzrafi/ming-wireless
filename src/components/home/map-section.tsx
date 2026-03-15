@@ -14,11 +14,11 @@ export function MapSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-[#3B82F6] text-sm font-semibold tracking-wider uppercase">Visit Us</span>
+          <span className="text-[#06B6D4] text-sm font-semibold tracking-wider uppercase">Visit Us</span>
           <h2 className="text-3xl sm:text-4xl font-black mt-2 tracking-tight">
             Downtown Toronto&apos;s Go-To
             <br />
-            <span className="text-[#2563EB]">Repair Shop</span>
+            <span className="text-[#0891B2]">Repair Shop</span>
           </h2>
         </motion.div>
 
@@ -52,7 +52,7 @@ export function MapSection() {
           >
             <div className="bg-[#1E293B]/50 border border-white/5 rounded-2xl p-6 space-y-5">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-[#06B6D4] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-sm">{BUSINESS.address}</p>
                   <p className="text-sm text-[#94A3B8]">{BUSINESS.city}, {BUSINESS.province} {BUSINESS.postalCode}</p>
@@ -60,14 +60,14 @@ export function MapSection() {
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
-                <a href={`tel:${BUSINESS.phoneRaw}`} className="font-semibold text-sm hover:text-[#3B82F6] transition-colors">
+                <Phone className="w-5 h-5 text-[#06B6D4] mt-0.5 flex-shrink-0" />
+                <a href={`tel:${BUSINESS.phoneRaw}`} className="font-semibold text-sm hover:text-[#06B6D4] transition-colors">
                   {BUSINESS.phone}
                 </a>
               </div>
 
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
+                <Clock className="w-5 h-5 text-[#06B6D4] mt-0.5 flex-shrink-0" />
                 <div className="text-sm space-y-1">
                   {Object.entries(BUSINESS.hours).map(([day, hours]) => (
                     <div key={day} className="flex justify-between gap-6">
@@ -83,7 +83,7 @@ export function MapSection() {
               href={`https://www.google.com/maps/dir/?api=1&destination=250+Dundas+St+W+Toronto`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-3 bg-[#2563EB] hover:bg-[#3B82F6] text-white font-semibold rounded-full transition-all glow-shadow"
+              className="flex items-center justify-center gap-2 w-full py-3 bg-[#0891B2] hover:bg-[#06B6D4] text-white font-semibold rounded-full transition-all glow-shadow"
             >
               <Navigation className="w-4 h-4" />
               Get Directions

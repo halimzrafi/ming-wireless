@@ -27,7 +27,7 @@ export function MobileBar() {
           </a>
           <Link
             href="/quote"
-            className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#2563EB] text-white text-sm font-semibold transition-all active:scale-95 glow-shadow"
+            className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#0891B2] text-white text-sm font-semibold transition-all active:scale-95 glow-shadow"
           >
             <Zap className="w-4 h-4" />
             Quick Quote

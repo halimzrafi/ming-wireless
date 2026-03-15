@@ -75,7 +75,7 @@ export function QuoteForm() {
             <input
               {...register("name")}
               placeholder=" "
-              className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+              className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
             />
             <label>Full Name</label>
           </div>
@@ -88,7 +88,7 @@ export function QuoteForm() {
               {...register("email")}
               type="email"
               placeholder=" "
-              className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+              className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
             />
             <label>Email</label>
           </div>
@@ -103,7 +103,7 @@ export function QuoteForm() {
               {...register("phone")}
               type="tel"
               placeholder=" "
-              className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+              className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
             />
             <label>Phone Number</label>
           </div>
@@ -113,7 +113,7 @@ export function QuoteForm() {
         <div>
           <select
             {...register("device")}
-            className="w-full px-3 py-3.5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors text-[#94A3B8]"
+            className="w-full px-3 py-3.5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors text-[#94A3B8]"
           >
             <option value="">Select Device</option>
             <option value="iphone">iPhone</option>
@@ -133,7 +133,7 @@ export function QuoteForm() {
             {...register("issue")}
             placeholder=" "
             rows={3}
-            className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors resize-none"
+            className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors resize-none"
           />
           <label>Describe the Issue</label>
         </div>
@@ -146,7 +146,7 @@ export function QuoteForm() {
           {(["email", "phone", "whatsapp"] as const).map((method) => (
             <label
               key={method}
-              className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl cursor-pointer hover:border-white/20 transition-colors text-sm has-[:checked]:border-[#2563EB] has-[:checked]:bg-[#2563EB]/10"
+              className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl cursor-pointer hover:border-white/20 transition-colors text-sm has-[:checked]:border-[#0891B2] has-[:checked]:bg-[#0891B2]/10"
             >
               <input
                 type="radio"
@@ -163,7 +163,7 @@ export function QuoteForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#2563EB] hover:bg-[#3B82F6] disabled:opacity-50 text-white font-bold rounded-full transition-all glow-shadow"
+        className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#0891B2] hover:bg-[#06B6D4] disabled:opacity-50 text-white font-bold rounded-full transition-all glow-shadow"
       >
         {isSubmitting ? (
           <Loader2 className="w-5 h-5 animate-spin" />

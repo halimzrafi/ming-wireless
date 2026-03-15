@@ -7,7 +7,6 @@ import { NAV_LINKS, BUSINESS } from "@/lib/constants";
 import { Menu, X, Phone, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/components/providers/theme-provider";
-import { LogoMark } from "@/components/ui/logo";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,16 +37,10 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <LogoMark className="w-9 h-9 group-hover:shadow-lg group-hover:shadow-amber-500/25 transition-shadow rounded-xl" />
-            <div className="flex flex-col leading-none">
-              <span className="text-lg font-black tracking-tight">
-                Ming<span className="text-[#F59E0B]">Wireless</span>
-              </span>
-              <span className="text-[0.5rem] font-medium tracking-[0.15em] uppercase text-[#94A3B8] hidden sm:block">
-                明 · Brilliant Connectivity
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <span className="text-xl font-black tracking-tight">
+              Ming<span className="text-[#0891B2]">Wireless</span>
+            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -85,7 +78,7 @@ export function Header() {
             </a>
             <Link
               href="/quote"
-              className="px-5 py-2.5 bg-[#2563EB] hover:bg-[#3B82F6] text-white text-sm font-semibold rounded-full transition-all duration-200 glow-shadow hover:scale-[1.04]"
+              className="px-5 py-2.5 bg-[#0891B2] hover:bg-[#06B6D4] text-white text-sm font-semibold rounded-full transition-all duration-200 glow-shadow hover:scale-[1.04]"
             >
               Get a Quote
             </Link>
@@ -137,7 +130,7 @@ export function Header() {
               <div className="pt-3 border-t border-white/5">
                 <a
                   href={`tel:${BUSINESS.phoneRaw}`}
-                  className="flex items-center gap-2 px-4 py-3 text-[#3B82F6] font-semibold"
+                  className="flex items-center gap-2 px-4 py-3 text-[#06B6D4] font-semibold"
                 >
                   <Phone className="w-5 h-5" />
                   {BUSINESS.phone}

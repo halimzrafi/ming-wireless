@@ -28,7 +28,7 @@ export default function HomePage() {
         <div className="max-w-lg mx-auto px-4">
           <div className="text-center mb-6">
             <h2 className="text-2xl font-black tracking-tight">
-              Get Your Quote in <span className="text-[#2563EB]">3 Taps</span>
+              Get Your Quote in <span className="text-[#0891B2]">3 Taps</span>
             </h2>
             <p className="text-sm text-[#94A3B8] mt-2">No waiting. No phone tag. Instant pricing.</p>
           </div>
@@ -47,13 +47,13 @@ export default function HomePage() {
           >
             <div>
               <h2 className="text-2xl font-black tracking-tight">
-                Get Your Quote in <span className="text-[#2563EB]">3 Taps</span>
+                Get Your Quote in <span className="text-[#0891B2]">3 Taps</span>
               </h2>
               <p className="text-[#94A3B8] mt-1">Select your device, tap the damage, get instant pricing.</p>
             </div>
             <button
               onClick={() => setIsQuoteModalOpen(true)}
-              className="px-8 py-3.5 bg-[#2563EB] hover:bg-[#3B82F6] text-white font-bold rounded-full transition-all glow-shadow hover:scale-[1.04]"
+              className="px-8 py-3.5 bg-[#0891B2] hover:bg-[#06B6D4] text-white font-bold rounded-full transition-all glow-shadow hover:scale-[1.04]"
             >
               Start Now
             </button>

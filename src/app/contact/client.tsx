@@ -52,7 +52,7 @@ export function ContactPageClient() {
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-4xl sm:text-5xl font-black tracking-tight">
-              Get In <span className="text-[#2563EB]">Touch</span>
+              Get In <span className="text-[#0891B2]">Touch</span>
             </h1>
             <p className="text-[#94A3B8] mt-3 max-w-lg mx-auto">
               Have a question? Need a quote? We&apos;re here to help.
@@ -69,8 +69,8 @@ export function ContactPageClient() {
             >
               <div className="bg-[#1E293B]/50 border border-white/5 rounded-2xl p-6 space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-[#3B82F6]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0891B2]/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-[#06B6D4]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
@@ -80,24 +80,24 @@ export function ContactPageClient() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-[#3B82F6]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0891B2]/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-[#06B6D4]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <a href={`tel:${BUSINESS.phoneRaw}`} className="text-sm text-[#3B82F6] hover:text-white transition-colors">
+                    <a href={`tel:${BUSINESS.phoneRaw}`} className="text-sm text-[#06B6D4] hover:text-white transition-colors">
                       {BUSINESS.phone}
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-[#3B82F6]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0891B2]/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-[#06B6D4]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <a href={`mailto:${BUSINESS.email}`} className="text-sm text-[#3B82F6] hover:text-white transition-colors">
+                    <a href={`mailto:${BUSINESS.email}`} className="text-sm text-[#06B6D4] hover:text-white transition-colors">
                       {BUSINESS.email}
                     </a>
                   </div>
@@ -116,8 +116,8 @@ export function ContactPageClient() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-[#3B82F6]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0891B2]/10 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-[#06B6D4]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Hours</h3>
@@ -171,7 +171,7 @@ export function ContactPageClient() {
                     <input
                       {...register("name")}
                       placeholder=" "
-                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
                     />
                     <label>Full Name</label>
                   </div>
@@ -182,7 +182,7 @@ export function ContactPageClient() {
                       {...register("email")}
                       type="email"
                       placeholder=" "
-                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
                     />
                     <label>Email</label>
                   </div>
@@ -193,7 +193,7 @@ export function ContactPageClient() {
                       {...register("phone")}
                       type="tel"
                       placeholder=" "
-                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors"
+                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors"
                     />
                     <label>Phone (optional)</label>
                   </div>
@@ -203,7 +203,7 @@ export function ContactPageClient() {
                       {...register("message")}
                       placeholder=" "
                       rows={5}
-                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#2563EB] focus:outline-none transition-colors resize-none"
+                      className="w-full px-3 pb-2 pt-5 bg-white/5 border border-white/10 rounded-xl text-sm focus:border-[#0891B2] focus:outline-none transition-colors resize-none"
                     />
                     <label>Message</label>
                   </div>
@@ -212,7 +212,7 @@ export function ContactPageClient() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#2563EB] hover:bg-[#3B82F6] disabled:opacity-50 text-white font-bold rounded-full transition-all glow-shadow"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#0891B2] hover:bg-[#06B6D4] disabled:opacity-50 text-white font-bold rounded-full transition-all glow-shadow"
                   >
                     {isSubmitting ? (
                       <Loader2 className="w-5 h-5 animate-spin" />

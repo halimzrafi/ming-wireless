@@ -22,11 +22,11 @@ export function CorporateSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <span className="text-[#3B82F6] text-sm font-semibold tracking-wider uppercase">For Business</span>
+            <span className="text-[#06B6D4] text-sm font-semibold tracking-wider uppercase">For Business</span>
             <h2 className="text-3xl sm:text-4xl font-black mt-2 tracking-tight mb-4">
               Trusted by Businesses
               <br />
-              <span className="text-[#2563EB]">Across Canada</span>
+              <span className="text-[#0891B2]">Across Canada</span>
             </h2>
             <p className="text-[#94A3B8] leading-relaxed mb-8">
               From startups to national retailers, Ming Wireless provides reliable, fast device repair
@@ -50,7 +50,7 @@ export function CorporateSection() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.45 }}
               >
-                <feature.icon className="w-6 h-6 text-[#3B82F6] mb-3" />
+                <feature.icon className="w-6 h-6 text-[#06B6D4] mb-3" />
                 <h3 className="text-sm font-bold mb-1">{feature.title}</h3>
                 <p className="text-xs text-[#94A3B8] leading-relaxed">{feature.description}</p>
               </motion.div>

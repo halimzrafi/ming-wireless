@@ -95,7 +95,7 @@ export function FixFlow({ isModal = false, onClose }: FixFlowProps) {
               key={s}
               className={`w-2 h-2 rounded-full transition-all ${
                 s === step
-                  ? "bg-[#2563EB] w-6"
+                  ? "bg-[#0891B2] w-6"
                   : s < step
                   ? "bg-[#22C55E]"
                   : "bg-white/20"
@@ -131,7 +131,7 @@ export function FixFlow({ isModal = false, onClose }: FixFlowProps) {
                     onClick={() => handleDeviceSelect(device.id)}
                     className={`flex flex-col items-center gap-3 p-5 rounded-xl border transition-all active:scale-95 ${
                       selectedDevice === device.id
-                        ? "bg-[#2563EB]/10 border-[#2563EB] text-[#3B82F6]"
+                        ? "bg-[#0891B2]/10 border-[#0891B2] text-[#06B6D4]"
                         : "bg-white/5 border-white/10 hover:border-white/20 text-[#94A3B8]"
                     }`}
                   >
@@ -182,7 +182,7 @@ export function FixFlow({ isModal = false, onClose }: FixFlowProps) {
               <button
                 onClick={handleNext}
                 disabled={selectedDamages.length === 0}
-                className="w-full mt-6 py-3.5 bg-[#2563EB] hover:bg-[#3B82F6] disabled:bg-white/10 disabled:text-[#94A3B8] text-white font-semibold rounded-full transition-all disabled:cursor-not-allowed"
+                className="w-full mt-6 py-3.5 bg-[#0891B2] hover:bg-[#06B6D4] disabled:bg-white/10 disabled:text-[#94A3B8] text-white font-semibold rounded-full transition-all disabled:cursor-not-allowed"
               >
                 {selectedDamages.length > 0
                   ? `See Price (${selectedDamages.length} issue${selectedDamages.length > 1 ? "s" : ""})`
@@ -227,7 +227,7 @@ export function FixFlow({ isModal = false, onClose }: FixFlowProps) {
                 }}
                 className={`flex flex-col items-center gap-2 p-4 rounded-xl border transition-all ${
                   selectedDevice === device.id
-                    ? "bg-[#2563EB]/10 border-[#2563EB] text-[#3B82F6]"
+                    ? "bg-[#0891B2]/10 border-[#0891B2] text-[#06B6D4]"
                     : "bg-white/5 border-white/10 hover:border-white/20 text-[#94A3B8]"
                 }`}
               >
@@ -261,7 +261,7 @@ export function FixFlow({ isModal = false, onClose }: FixFlowProps) {
           {step === 2 && selectedDamages.length > 0 && (
             <button
               onClick={handleNext}
-              className="w-full mt-4 py-2.5 bg-[#2563EB] hover:bg-[#3B82F6] text-white text-sm font-semibold rounded-full transition-all"
+              className="w-full mt-4 py-2.5 bg-[#0891B2] hover:bg-[#06B6D4] text-white text-sm font-semibold rounded-full transition-all"
             >
               See Price →
             </button>
@@ -389,7 +389,7 @@ function ResultCard({
   return (
     <div className="space-y-4">
       {/* Price display */}
-      <div className="text-center p-4 rounded-xl bg-gradient-to-b from-[#2563EB]/10 to-transparent border border-[#2563EB]/20">
+      <div className="text-center p-4 rounded-xl bg-gradient-to-b from-[#0891B2]/10 to-transparent border border-[#0891B2]/20">
         <p className="text-xs text-[#94A3B8] mb-1">{deviceLabel} Repair Estimate</p>
         <p className="text-3xl font-black text-white">
           ${totalMin}
@@ -415,7 +415,7 @@ function ResultCard({
       <div className={`space-y-2 ${compact ? "" : "pt-2"}`}>
         <Link
           href="/book"
-          className="flex items-center justify-center gap-2 w-full py-3 bg-[#2563EB] hover:bg-[#3B82F6] text-white font-semibold rounded-full transition-all glow-shadow"
+          className="flex items-center justify-center gap-2 w-full py-3 bg-[#0891B2] hover:bg-[#06B6D4] text-white font-semibold rounded-full transition-all glow-shadow"
         >
           <Calendar className="w-4 h-4" />
           Book Now

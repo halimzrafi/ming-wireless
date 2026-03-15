@@ -25,7 +25,7 @@ function generateSpriteFrames(count: number): HTMLCanvasElement[] {
     ctx.roundRect(20, 20, 320, 680, radius);
     ctx.fillStyle = "#1a1a2e";
     ctx.fill();
-    ctx.strokeStyle = progress > 0.9 ? "#2563EB" : "#333";
+    ctx.strokeStyle = progress > 0.9 ? "#0891B2" : "#333";
     ctx.lineWidth = 3;
     ctx.stroke();
 
@@ -82,8 +82,8 @@ function generateSpriteFrames(count: number): HTMLCanvasElement[] {
     if (progress > 0.3) {
       const glowOpacity = (progress - 0.3) * 1.4;
       const glowGrad = ctx.createRadialGradient(180, 360, 0, 180, 360, 200);
-      glowGrad.addColorStop(0, `rgba(37, 99, 235, ${glowOpacity * 0.3})`);
-      glowGrad.addColorStop(0.5, `rgba(37, 99, 235, ${glowOpacity * 0.1})`);
+      glowGrad.addColorStop(0, `rgba(8, 145, 178, ${glowOpacity * 0.3})`);
+      glowGrad.addColorStop(0.5, `rgba(8, 145, 178, ${glowOpacity * 0.1})`);
       glowGrad.addColorStop(1, "transparent");
       ctx.fillStyle = glowGrad;
       ctx.fillRect(30, 60, 300, 600);
@@ -95,9 +95,9 @@ function generateSpriteFrames(count: number): HTMLCanvasElement[] {
 
       // Vibrant wallpaper gradient
       const wallGrad = ctx.createLinearGradient(30, 60, 330, 660);
-      wallGrad.addColorStop(0, `rgba(37, 99, 235, ${contentOpacity * 0.5})`);
-      wallGrad.addColorStop(0.4, `rgba(99, 102, 241, ${contentOpacity * 0.4})`);
-      wallGrad.addColorStop(0.7, `rgba(139, 92, 246, ${contentOpacity * 0.35})`);
+      wallGrad.addColorStop(0, `rgba(8, 145, 178, ${contentOpacity * 0.5})`);
+      wallGrad.addColorStop(0.4, `rgba(6, 182, 212, ${contentOpacity * 0.4})`);
+      wallGrad.addColorStop(0.7, `rgba(245, 158, 11, ${contentOpacity * 0.3})`);
       wallGrad.addColorStop(1, `rgba(15, 23, 42, ${contentOpacity * 0.6})`);
       ctx.fillStyle = wallGrad;
       ctx.beginPath();
@@ -129,8 +129,8 @@ function generateSpriteFrames(count: number): HTMLCanvasElement[] {
       ctx.textAlign = "start";
 
       // App icons grid — 4 columns × 4 rows
-      const iconColors = ["#2563EB", "#22C55E", "#EF4444", "#F59E0B", "#8B5CF6", "#EC4899", "#06B6D4", "#F97316",
-                          "#10B981", "#6366F1", "#E11D48", "#FBBF24", "#14B8A6", "#A855F7", "#FB923C", "#3B82F6"];
+      const iconColors = ["#0891B2", "#22C55E", "#EF4444", "#F59E0B", "#8B5CF6", "#EC4899", "#06B6D4", "#F97316",
+                          "#10B981", "#6366F1", "#E11D48", "#FBBF24", "#14B8A6", "#A855F7", "#FB923C", "#06B6D4"];
       for (let row = 0; row < 4; row++) {
         for (let col = 0; col < 4; col++) {
           const ix = 52 + col * 68;
@@ -147,7 +147,7 @@ function generateSpriteFrames(count: number): HTMLCanvasElement[] {
       ctx.roundRect(50, 600, 260, 50, 20);
       ctx.fillStyle = `rgba(255, 255, 255, ${contentOpacity * 0.1})`;
       ctx.fill();
-      const dockColors = ["#22C55E", "#2563EB", "#EF4444", "#F59E0B"];
+      const dockColors = ["#22C55E", "#0891B2", "#EF4444", "#F59E0B"];
       for (let d = 0; d < 4; d++) {
         ctx.beginPath();
         ctx.roundRect(68 + d * 62, 608, 36, 36, 10);
@@ -246,8 +246,8 @@ export function Hero() {
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden hero-bg-pulse">
         {/* Ambient gradient orbs */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#3B82F6]/8 rounded-full blur-[120px]" />
+          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#0891B2]/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#06B6D4]/8 rounded-full blur-[120px]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -259,7 +259,7 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="inline-block px-4 py-1.5 bg-[#2563EB]/10 border border-[#2563EB]/20 rounded-full text-[#3B82F6] text-sm font-medium mb-6">
+                <span className="inline-block px-4 py-1.5 bg-[#0891B2]/10 border border-[#0891B2]/20 rounded-full text-[#06B6D4] text-sm font-medium mb-6">
                   #1 Phone Repair Shop in Downtown Toronto
                 </span>
               </motion.div>
@@ -272,7 +272,7 @@ export function Hero() {
               >
                 We Fix Phones.
                 <br />
-                <span className="text-[#2563EB]">Same Day.</span>
+                <span className="text-[#0891B2]">Same Day.</span>
               </motion.h1>
 
               <motion.p
@@ -293,7 +293,7 @@ export function Hero() {
               >
                 <Link
                   href="/quote"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#2563EB] hover:bg-[#3B82F6] text-white text-base font-bold rounded-full transition-all duration-200 glow-shadow hover:scale-[1.04]"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#0891B2] hover:bg-[#06B6D4] text-white text-base font-bold rounded-full transition-all duration-200 glow-shadow hover:scale-[1.04]"
                 >
                   Get Instant Quote
                 </Link>
@@ -315,12 +315,12 @@ export function Hero() {
             >
               <div className="relative">
                 {/* Glow behind phone */}
-                <div className="absolute inset-0 bg-[#2563EB]/20 blur-[80px] rounded-full scale-75" />
+                <div className="absolute inset-0 bg-[#0891B2]/20 blur-[80px] rounded-full scale-75" />
 
                 {isMobile ? (
                   /* Static phone illustration for mobile */
                   <div className="relative w-[240px] h-[480px] sm:w-[280px] sm:h-[560px]">
-                    <div className="absolute inset-0 rounded-[2rem] bg-[#1a1a2e] border-2 border-[#2563EB]/30 shadow-2xl shadow-blue-500/20 overflow-hidden">
+                    <div className="absolute inset-0 rounded-[2rem] bg-[#1a1a2e] border-2 border-[#0891B2]/30 shadow-2xl shadow-cyan-500/20 overflow-hidden">
                       {/* Notch */}
                       <div className="absolute top-1 left-1/2 -translate-x-1/2 w-20 h-6 bg-black rounded-full" />
                       {/* Screen glow */}

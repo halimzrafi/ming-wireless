@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { BUSINESS, NAV_LINKS, SERVICES } from "@/lib/constants";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { LogoMark } from "@/components/ui/logo";
 
 export function Footer() {
   return (
@@ -10,16 +9,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <LogoMark className="w-9 h-9 rounded-xl" />
-              <div className="flex flex-col leading-none">
-                <span className="text-lg font-black tracking-tight">
-                  Ming<span className="text-[#F59E0B]">Wireless</span>
-                </span>
-                <span className="text-[0.5rem] font-medium tracking-[0.15em] uppercase text-[#94A3B8]">
-                  明 · Brilliant Connectivity
-                </span>
-              </div>
+            <Link href="/" className="flex items-center mb-4">
+              <span className="text-xl font-black tracking-tight">
+                Ming<span className="text-[#0891B2]">Wireless</span>
+              </span>
             </Link>
             <p className="text-[#94A3B8] text-sm leading-relaxed mb-4">
               Toronto&apos;s trusted destination for same-day phone, tablet, and laptop repairs. 100% original parts, lifetime warranty.
@@ -52,7 +45,7 @@ export function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/quote" className="text-sm text-[#3B82F6] hover:text-[#2563EB] font-medium transition-colors">
+                <Link href="/quote" className="text-sm text-[#06B6D4] hover:text-[#0891B2] font-medium transition-colors">
                   Get Instant Quote
                 </Link>
               </li>
@@ -64,23 +57,23 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-[#94A3B8] mb-4">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3 text-[#94A3B8]">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#3B82F6]" />
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#06B6D4]" />
                 <span>{BUSINESS.address}, {BUSINESS.city}, {BUSINESS.province} {BUSINESS.postalCode}</span>
               </li>
               <li>
                 <a href={`tel:${BUSINESS.phoneRaw}`} className="flex items-center gap-3 text-[#94A3B8] hover:text-white transition-colors">
-                  <Phone className="w-4 h-4 flex-shrink-0 text-[#3B82F6]" />
+                  <Phone className="w-4 h-4 flex-shrink-0 text-[#06B6D4]" />
                   {BUSINESS.phone}
                 </a>
               </li>
               <li>
                 <a href={`mailto:${BUSINESS.email}`} className="flex items-center gap-3 text-[#94A3B8] hover:text-white transition-colors">
-                  <Mail className="w-4 h-4 flex-shrink-0 text-[#3B82F6]" />
+                  <Mail className="w-4 h-4 flex-shrink-0 text-[#06B6D4]" />
                   {BUSINESS.email}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-[#94A3B8]">
-                <Clock className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#3B82F6]" />
+                <Clock className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#06B6D4]" />
                 <div>
                   {Object.entries(BUSINESS.hours).map(([day, hours]) => (
                     <div key={day}>

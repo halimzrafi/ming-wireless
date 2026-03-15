@@ -19,7 +19,7 @@ export function QuotePageClient() {
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-4xl sm:text-5xl font-black tracking-tight">
-              Get Your <span className="text-[#2563EB]">Instant Quote</span>
+              Get Your <span className="text-[#0891B2]">Instant Quote</span>
             </h1>
             <p className="text-[#94A3B8] mt-3 max-w-lg mx-auto">
               Select your device and issue for instant pricing. Or fill out the detailed form below for a custom quote.
@@ -37,7 +37,7 @@ export function QuotePageClient() {
           <div className="mt-12 text-center">
             <button
               onClick={() => setShowFullForm(!showFullForm)}
-              className="text-[#3B82F6] hover:text-white text-sm font-medium transition-colors"
+              className="text-[#06B6D4] hover:text-white text-sm font-medium transition-colors"
             >
               {showFullForm ? "Hide detailed form" : "Need a custom quote? Fill out the detailed form"}
             </button>

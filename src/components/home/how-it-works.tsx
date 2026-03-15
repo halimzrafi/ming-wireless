@@ -35,11 +35,11 @@ export function HowItWorks() {
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
         >
-          <span className="text-[#3B82F6] text-sm font-semibold tracking-wider uppercase">How It Works</span>
+          <span className="text-[#06B6D4] text-sm font-semibold tracking-wider uppercase">How It Works</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mt-2 tracking-tight">
             Three Steps to a
             <br />
-            <span className="text-[#2563EB]">Like-New Device</span>
+            <span className="text-[#0891B2]">Like-New Device</span>
           </h2>
         </motion.div>
 
@@ -55,12 +55,12 @@ export function HowItWorks() {
             >
               {/* Connector line */}
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gradient-to-r from-[#2563EB]/30 to-transparent" />
+                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gradient-to-r from-[#0891B2]/30 to-transparent" />
               )}
               <div className="relative">
                 <span className="absolute -top-3 -right-3 text-6xl font-black text-white/[0.03]">{step.number}</span>
-                <div className="w-20 h-20 rounded-2xl bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-6">
-                  <step.icon className="w-9 h-9 text-[#3B82F6]" />
+                <div className="w-20 h-20 rounded-2xl bg-[#0891B2]/10 flex items-center justify-center mx-auto mb-6">
+                  <step.icon className="w-9 h-9 text-[#06B6D4]" />
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3">{step.title}</h3>

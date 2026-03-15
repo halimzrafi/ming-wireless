@@ -13,8 +13,8 @@
 @layer base {
   :root {
     --bg-primary: #0F172A;
-    --accent: #2563EB;
-    --accent-glow: #3B82F6;
+    --accent: #0891B2;
+    --accent-glow: #06B6D4;
     --surface: #1E293B;
     --text-primary: #F8FAFC;
     --text-muted: #94A3B8;
@@ -27,7 +27,7 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 47.4% 11.2%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
+    --primary: 187 91% 36.5%;
     --primary-foreground: 210 40% 98%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -38,7 +38,7 @@
     --destructive: 0 84.2% 60.2%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 187 91% 36.5%;
     --radius: 1rem;
   }
 
@@ -86,7 +86,7 @@
 .custom-cursor.hovering {
   width: 56px;
   height: 56px;
-  background: rgba(37, 99, 235, 0.15);
+  background: rgba(8, 145, 178, 0.15);
 }
 
 /* Float label inputs */
@@ -128,10 +128,10 @@
 /* Radial pulse background */
 @keyframes radialPulse {
   0%, 100% {
-    background: radial-gradient(ellipse at 50% 40%, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 50% 40%, rgba(8, 145, 178, 0.08) 0%, transparent 70%);
   }
   50% {
-    background: radial-gradient(ellipse at 50% 40%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 50% 40%, rgba(8, 145, 178, 0.15) 0%, transparent 70%);
   }
 }
 
@@ -141,11 +141,11 @@
 
 /* Glow shadow for CTAs */
 .glow-shadow {
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3), 0 0 60px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 20px rgba(8, 145, 178, 0.3), 0 0 60px rgba(8, 145, 178, 0.1);
 }
 
 .glow-shadow:hover {
-  box-shadow: 0 0 30px rgba(37, 99, 235, 0.5), 0 0 80px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 30px rgba(8, 145, 178, 0.5), 0 0 80px rgba(8, 145, 178, 0.2);
 }
 
 /* Damage zone pulse */
@@ -192,7 +192,7 @@
   --surface: #FFFFFF;
   --text-primary: #0F172A;
   --text-muted: #475569;
-  --accent-glow: #2563EB;
+  --accent-glow: #0891B2;
 
   --background: 210 40% 98%;
   --foreground: 222.2 47.4% 11.2%;
@@ -220,41 +220,89 @@
 [data-theme="light"] header {
   color: #0F172A;
 }
-[data-theme="light"] header .bg-\[\#0F172A\]\/90 {
-  background-color: rgba(255, 255, 255, 0.92) !important;
+[data-theme="light"] header.bg-\[\#0F172A\]\/90,
+[data-theme="light"] header [class*="bg-[#0F172A]"] {
+  background-color: rgba(255, 255, 255, 0.95) !important;
   border-bottom-color: rgba(0, 0, 0, 0.08) !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
 }
-[data-theme="light"] header .bg-\[\#0F172A\]\/95 {
+/* All text inside header → dark */
+[data-theme="light"] header span,
+[data-theme="light"] header a,
+[data-theme="light"] header button,
+[data-theme="light"] header nav a {
+  color: #334155 !important;
+}
+[data-theme="light"] header a:hover,
+[data-theme="light"] header button:hover,
+[data-theme="light"] header nav a:hover {
+  color: #0F172A !important;
+}
+/* Active nav link */
+[data-theme="light"] header nav a[class*="bg-white"] {
+  background-color: rgba(8, 145, 178, 0.12) !important;
+  color: #0E7490 !important;
+}
+/* Logo brand color */
+[data-theme="light"] header .text-\[\#0891B2\] {
+  color: #0891B2 !important;
+}
+/* Keep CTA button white text */
+[data-theme="light"] header a[class*="bg-[#0891B2]"] {
+  color: #FFFFFF !important;
+  background-color: #0891B2 !important;
+}
+/* Mobile menu bg */
+[data-theme="light"] header [class*="bg-[#0F172A]"] {
   background-color: rgba(255, 255, 255, 0.97) !important;
 }
 
-/* --- Nav links in header --- */
+/* --- Muted text → darker for light bg --- */
 [data-theme="light"] .text-\[\#94A3B8\] {
   color: #475569 !important;
-}
-[data-theme="light"] .hover\:text-white:hover {
-  color: #0F172A !important;
-}
-[data-theme="light"] .text-white {
-  color: #0F172A !important;
 }
 [data-theme="light"] .text-\[\#F8FAFC\] {
   color: #0F172A !important;
 }
 
-/* Keep white text on colored buttons */
-[data-theme="light"] .bg-\[\#2563EB\] .text-white,
-[data-theme="light"] .bg-\[\#2563EB\].text-white,
-[data-theme="light"] .bg-\[\#22C55E\] .text-white,
-[data-theme="light"] .bg-\[\#22C55E\].text-white,
-[data-theme="light"] a.bg-\[\#2563EB\],
-[data-theme="light"] a.bg-\[\#22C55E\],
-[data-theme="light"] button.bg-\[\#2563EB\],
-[data-theme="light"] .glow-shadow.text-white,
-[data-theme="light"] [class*="bg-[#2563EB]"][class*="text-white"],
-[data-theme="light"] [class*="bg-[#22C55E]"][class*="text-white"] {
+/* --- General text-white → dark on light backgrounds --- */
+[data-theme="light"] .text-white {
+  color: #0F172A !important;
+}
+[data-theme="light"] .hover\:text-white:hover {
+  color: #0F172A !important;
+}
+
+/* --- EXCEPTIONS: Keep white text ONLY on colored bg buttons/links --- */
+[data-theme="light"] a[class*="bg-[#0891B2]"],
+[data-theme="light"] a[class*="bg-[#22C55E]"],
+[data-theme="light"] button[class*="bg-[#0891B2]"],
+[data-theme="light"] button[class*="bg-[#22C55E]"],
+[data-theme="light"] a.glow-shadow,
+[data-theme="light"] button.glow-shadow {
   color: #FFFFFF !important;
+}
+/* Hero secondary button: dark text + dark border on light bg */
+[data-theme="light"] a[class*="bg-white/5"] {
+  background-color: transparent !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+}
+[data-theme="light"] a[class*="bg-white/5"]:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* --- Theme toggle button icon --- */
+[data-theme="light"] button[aria-label="Toggle theme"] {
+  color: #475569 !important;
+}
+[data-theme="light"] button[aria-label="Toggle theme"]:hover {
+  color: #0F172A !important;
+}
+
+/* --- Mobile menu hamburger --- */
+[data-theme="light"] button[aria-label="Toggle menu"] {
+  color: #334155 !important;
 }
 
 /* --- Primary backgrounds → white/light --- */
@@ -318,31 +366,39 @@
 
 @keyframes radialPulseLight {
   0%, 100% {
-    background: radial-gradient(ellipse at 50% 40%, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 50% 40%, rgba(8, 145, 178, 0.06) 0%, transparent 70%);
   }
   50% {
-    background: radial-gradient(ellipse at 50% 40%, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 50% 40%, rgba(8, 145, 178, 0.12) 0%, transparent 70%);
   }
 }
 
 /* --- Gradient orbs in hero (tone down in light) --- */
-[data-theme="light"] .bg-\[\#2563EB\]\/10 {
-  background-color: rgba(37, 99, 235, 0.08) !important;
+[data-theme="light"] .bg-\[\#0891B2\]\/10 {
+  background-color: rgba(8, 145, 178, 0.08) !important;
 }
-[data-theme="light"] .bg-\[\#3B82F6\]\/8 {
-  background-color: rgba(59, 130, 246, 0.06) !important;
+[data-theme="light"] .bg-\[\#06B6D4\]\/8 {
+  background-color: rgba(6, 182, 212, 0.06) !important;
 }
 
 /* --- Mobile bottom bar --- */
-[data-theme="light"] .safe-area-pb,
-[data-theme="light"] .bg-\[\#0F172A\]\/95.backdrop-blur-xl {
+[data-theme="light"] .safe-area-pb {
   background-color: rgba(255, 255, 255, 0.97) !important;
 }
-/* Keep mobile bar button text white */
-[data-theme="light"] .bg-\[\#1E293B\].text-white,
-[data-theme="light"] .bg-\[\#22C55E\].text-white,
-[data-theme="light"] .bg-\[\#2563EB\].text-white {
+/* Mobile bar buttons keep white text */
+[data-theme="light"] .safe-area-pb a[class*="bg-[#1E293B]"],
+[data-theme="light"] .safe-area-pb a[class*="bg-[#22C55E]"],
+[data-theme="light"] .safe-area-pb a[class*="bg-[#0891B2]"] {
   color: #FFFFFF !important;
+}
+/* Mobile bar dark button → teal in light mode */
+[data-theme="light"] .safe-area-pb a[class*="bg-[#1E293B]"] {
+  background-color: #0E7490 !important;
+}
+
+/* --- Footer heading days --- */
+[data-theme="light"] footer .text-\[\#F8FAFC\] {
+  color: #0F172A !important;
 }
 
 /* --- Review cards --- */
@@ -374,26 +430,57 @@
 
 /* --- Glow shadow (soften in light) --- */
 [data-theme="light"] .glow-shadow {
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2), 0 0 30px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 4px 14px rgba(8, 145, 178, 0.2), 0 0 30px rgba(8, 145, 178, 0.08);
 }
 [data-theme="light"] .glow-shadow:hover {
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3), 0 0 40px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 4px 20px rgba(8, 145, 178, 0.3), 0 0 40px rgba(8, 145, 178, 0.12);
 }
 
 /* --- Ensure accent-colored text stays visible --- */
-[data-theme="light"] .text-\[\#3B82F6\] {
-  color: #2563EB !important;
+[data-theme="light"] .text-\[\#06B6D4\] {
+  color: #0891B2 !important;
 }
-[data-theme="light"] .text-\[\#2563EB\] {
-  color: #1D4ED8 !important;
+[data-theme="light"] .text-\[\#0891B2\] {
+  color: #0E7490 !important;
 }
 [data-theme="light"] .text-\[\#22C55E\] {
   color: #16A34A !important;
 }
 
 /* --- Keep colored backgrounds' text white --- */
-[data-theme="light"] .bg-gradient-to-br.from-\[\#2563EB\] {
+[data-theme="light"] .bg-gradient-to-br.from-\[\#0891B2\] {
   color: #FFFFFF !important;
+}
+
+/* --- Live counters section: remove dark gradient --- */
+[data-theme="light"] .bg-gradient-to-b[class*="via-[#1E293B]"] {
+  background: transparent !important;
+}
+
+/* --- CTA banner "Get Your Quote in 3 Taps" --- */
+[data-theme="light"] .bg-gradient-to-r[class*="from-[#1E293B]"] {
+  background: #F1F5F9 !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* --- Review cards --- */
+[data-theme="light"] .review-scroll .bg-\[\#1E293B\] {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+/* Review carousel fade edges → white gradient */
+[data-theme="light"] .bg-gradient-to-r[class*="from-[#0F172A]"] {
+  background: linear-gradient(to right, #F8FAFC, transparent) !important;
+}
+[data-theme="light"] .bg-gradient-to-l[class*="from-[#0F172A]"] {
+  background: linear-gradient(to left, #F8FAFC, transparent) !important;
+}
+
+/* --- Fix flow container --- */
+[data-theme="light"] .bg-\[\#1E293B\]\/50 {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
 }
 
 /* --- Transition for smooth theme change --- */

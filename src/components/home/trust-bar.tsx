@@ -24,8 +24,8 @@ export function TrustBar() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.45 }}
             >
-              <div className="w-10 h-10 rounded-xl bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0">
-                <item.icon className="w-5 h-5 text-[#3B82F6]" />
+              <div className="w-10 h-10 rounded-xl bg-[#0891B2]/10 flex items-center justify-center flex-shrink-0">
+                <item.icon className="w-5 h-5 text-[#06B6D4]" />
               </div>
               <div>
                 <p className="text-sm font-bold text-white">{item.label}</p>

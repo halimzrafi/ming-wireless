@@ -27,7 +27,7 @@ export function ServicesPageClient() {
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-4xl sm:text-5xl font-black tracking-tight">
-              Our Repair <span className="text-[#2563EB]">Services</span>
+              Our Repair <span className="text-[#0891B2]">Services</span>
             </h1>
             <p className="text-[#94A3B8] mt-3 max-w-lg mx-auto">
               From cracked screens to water damage — we fix it all with original parts and same-day turnaround.
@@ -50,8 +50,8 @@ export function ServicesPageClient() {
                   <div className="grid lg:grid-cols-3 gap-6 items-center">
                     <div className="lg:col-span-2">
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-2xl bg-[#2563EB]/10 flex items-center justify-center">
-                          <Icon className="w-6 h-6 text-[#3B82F6]" />
+                        <div className="w-12 h-12 rounded-2xl bg-[#0891B2]/10 flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-[#06B6D4]" />
                         </div>
                         <h2 className="text-2xl font-bold">{service.title}</h2>
                       </div>
@@ -74,7 +74,7 @@ export function ServicesPageClient() {
                       </p>
                       <Link
                         href="/quote"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[#2563EB] hover:bg-[#3B82F6] text-white font-semibold rounded-full transition-all glow-shadow"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-[#0891B2] hover:bg-[#06B6D4] text-white font-semibold rounded-full transition-all glow-shadow"
                       >
                         {service.cta}
                         <ArrowRight className="w-4 h-4" />
@@ -95,7 +95,7 @@ export function ServicesPageClient() {
           >
             <div className="text-center mb-8">
               <h2 className="text-3xl font-black tracking-tight">
-                Get Your <span className="text-[#2563EB]">Instant Quote</span>
+                Get Your <span className="text-[#0891B2]">Instant Quote</span>
               </h2>
             </div>
             <div className="max-w-4xl mx-auto">

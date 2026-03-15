@@ -44,8 +44,8 @@ function Counter({ end, suffix = "", label, sublabel, icon: Icon }: CounterProps
 
   return (
     <div className="text-center">
-      <div className="w-14 h-14 rounded-2xl bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-4">
-        <Icon className="w-7 h-7 text-[#3B82F6]" />
+      <div className="w-14 h-14 rounded-2xl bg-[#0891B2]/10 flex items-center justify-center mx-auto mb-4">
+        <Icon className="w-7 h-7 text-[#06B6D4]" />
       </div>
       <p className="text-4xl sm:text-5xl font-black tracking-tight">
         <span ref={ref}>0</span>
