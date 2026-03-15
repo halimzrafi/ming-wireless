@@ -1,101 +1,80 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useState } from "react";
+import { Hero } from "@/components/home/hero";
+import { TrustBar } from "@/components/home/trust-bar";
+import { FixFlow, FixFlowModal } from "@/components/fix-in-3-taps/fix-flow";
+import { ServiceCards } from "@/components/home/service-cards";
+import { HowItWorks } from "@/components/home/how-it-works";
+import { LiveCounters } from "@/components/home/live-counters";
+import { Reviews } from "@/components/home/reviews";
+import { CorporateSection } from "@/components/home/corporate-section";
+import { RepairTracker } from "@/components/home/repair-tracker";
+import { MapSection } from "@/components/home/map-section";
+import { Footer } from "@/components/layout/footer";
+import { ExitIntent } from "@/components/ui/exit-intent";
+import { motion } from "framer-motion";
+
+export default function HomePage() {
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Hero />
+      <TrustBar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Fix in 3 Taps — inline on mobile */}
+      <section className="py-16 lg:hidden">
+        <div className="max-w-lg mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-black tracking-tight">
+              Get Your Quote in <span className="text-[#2563EB]">3 Taps</span>
+            </h2>
+            <p className="text-sm text-[#94A3B8] mt-2">No waiting. No phone tag. Instant pricing.</p>
+          </div>
+          <FixFlow />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Desktop: CTA to open modal */}
+      <section className="hidden lg:block py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="flex items-center justify-between bg-gradient-to-r from-[#1E293B] to-[#1E293B]/50 border border-white/5 rounded-2xl p-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div>
+              <h2 className="text-2xl font-black tracking-tight">
+                Get Your Quote in <span className="text-[#2563EB]">3 Taps</span>
+              </h2>
+              <p className="text-[#94A3B8] mt-1">Select your device, tap the damage, get instant pricing.</p>
+            </div>
+            <button
+              onClick={() => setIsQuoteModalOpen(true)}
+              className="px-8 py-3.5 bg-[#2563EB] hover:bg-[#3B82F6] text-white font-bold rounded-full transition-all glow-shadow hover:scale-[1.04]"
+            >
+              Start Now
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
+      <FixFlowModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
+
+      <ServiceCards />
+      <HowItWorks />
+      <LiveCounters />
+      <Reviews />
+      <CorporateSection />
+      <RepairTracker />
+      <MapSection />
+      <Footer />
+      <ExitIntent />
+
+      {/* Bottom padding for mobile bar */}
+      <div className="h-20 lg:hidden" />
+    </>
   );
 }

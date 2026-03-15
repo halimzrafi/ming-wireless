@@ -11,6 +11,23 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        navy: {
+          DEFAULT: "#0F172A",
+          light: "#1E293B",
+        },
+        electric: {
+          DEFAULT: "#2563EB",
+          glow: "#3B82F6",
+        },
+        slate: {
+          50: "#F8FAFC",
+          400: "#94A3B8",
+        },
+        danger: "#EF4444",
+        success: "#22C55E",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
     },
   },
