@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { MobileBar } from "@/components/layout/mobile-bar";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { LenisProvider } from "@/components/providers/lenis-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -89,12 +90,14 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-[#0F172A] text-[#F8FAFC] font-sans overflow-x-hidden">
-        <LenisProvider>
-          <Header />
-          <main>{children}</main>
-          <MobileBar />
-          <WhatsAppButton />
-        </LenisProvider>
+        <ThemeProvider>
+          <LenisProvider>
+            <Header />
+            <main>{children}</main>
+            <MobileBar />
+            <WhatsAppButton />
+          </LenisProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

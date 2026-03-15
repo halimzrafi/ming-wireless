@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BUSINESS, NAV_LINKS, SERVICES } from "@/lib/constants";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { LogoMark } from "@/components/ui/logo";
 
 export function Footer() {
   return (
@@ -9,13 +10,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#3B82F6] flex items-center justify-center font-black text-white text-sm">
-                MW
+            <Link href="/" className="flex items-center gap-2.5 mb-4">
+              <LogoMark className="w-9 h-9 rounded-xl" />
+              <div className="flex flex-col leading-none">
+                <span className="text-lg font-black tracking-tight">
+                  Ming<span className="text-[#F59E0B]">Wireless</span>
+                </span>
+                <span className="text-[0.5rem] font-medium tracking-[0.15em] uppercase text-[#94A3B8]">
+                  明 · Brilliant Connectivity
+                </span>
               </div>
-              <span className="text-lg font-bold tracking-tight">
-                Ming<span className="text-[#3B82F6]">Wireless</span>
-              </span>
             </Link>
             <p className="text-[#94A3B8] text-sm leading-relaxed mb-4">
               Toronto&apos;s trusted destination for same-day phone, tablet, and laptop repairs. 100% original parts, lifetime warranty.

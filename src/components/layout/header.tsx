@@ -4,13 +4,16 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS, BUSINESS } from "@/lib/constants";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "@/components/providers/theme-provider";
+import { LogoMark } from "@/components/ui/logo";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,13 +38,16 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#3B82F6] flex items-center justify-center font-black text-white text-sm tracking-tighter group-hover:shadow-lg group-hover:shadow-blue-500/25 transition-shadow">
-              MW
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <LogoMark className="w-9 h-9 group-hover:shadow-lg group-hover:shadow-amber-500/25 transition-shadow rounded-xl" />
+            <div className="flex flex-col leading-none">
+              <span className="text-lg font-black tracking-tight">
+                Ming<span className="text-[#F59E0B]">Wireless</span>
+              </span>
+              <span className="text-[0.5rem] font-medium tracking-[0.15em] uppercase text-[#94A3B8] hidden sm:block">
+                明 · Brilliant Connectivity
+              </span>
             </div>
-            <span className="text-lg font-bold tracking-tight">
-              Ming<span className="text-[#3B82F6]">Wireless</span>
-            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -63,6 +69,13 @@ export function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-3">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full text-[#94A3B8] hover:text-white hover:bg-white/10 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
             <a
               href={`tel:${BUSINESS.phoneRaw}`}
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-[#94A3B8] hover:text-white transition-colors"
@@ -80,6 +93,13 @@ export function Header() {
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-[#94A3B8] hover:text-white transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-[#94A3B8] hover:text-white"

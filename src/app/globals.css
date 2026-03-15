@@ -183,3 +183,223 @@
 .sprite-canvas {
   will-change: transform;
 }
+
+/* ============================================
+   LIGHT THEME OVERRIDES
+   ============================================ */
+[data-theme="light"] {
+  --bg-primary: #F8FAFC;
+  --surface: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-muted: #475569;
+  --accent-glow: #2563EB;
+
+  --background: 210 40% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+}
+
+/* Body & page backgrounds */
+[data-theme="light"] body {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+/* --- Header --- */
+[data-theme="light"] header {
+  color: #0F172A;
+}
+[data-theme="light"] header .bg-\[\#0F172A\]\/90 {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+[data-theme="light"] header .bg-\[\#0F172A\]\/95 {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+}
+
+/* --- Nav links in header --- */
+[data-theme="light"] .text-\[\#94A3B8\] {
+  color: #475569 !important;
+}
+[data-theme="light"] .hover\:text-white:hover {
+  color: #0F172A !important;
+}
+[data-theme="light"] .text-white {
+  color: #0F172A !important;
+}
+[data-theme="light"] .text-\[\#F8FAFC\] {
+  color: #0F172A !important;
+}
+
+/* Keep white text on colored buttons */
+[data-theme="light"] .bg-\[\#2563EB\] .text-white,
+[data-theme="light"] .bg-\[\#2563EB\].text-white,
+[data-theme="light"] .bg-\[\#22C55E\] .text-white,
+[data-theme="light"] .bg-\[\#22C55E\].text-white,
+[data-theme="light"] a.bg-\[\#2563EB\],
+[data-theme="light"] a.bg-\[\#22C55E\],
+[data-theme="light"] button.bg-\[\#2563EB\],
+[data-theme="light"] .glow-shadow.text-white,
+[data-theme="light"] [class*="bg-[#2563EB]"][class*="text-white"],
+[data-theme="light"] [class*="bg-[#22C55E]"][class*="text-white"] {
+  color: #FFFFFF !important;
+}
+
+/* --- Primary backgrounds → white/light --- */
+[data-theme="light"] .bg-\[\#0F172A\] {
+  background-color: #F8FAFC !important;
+}
+[data-theme="light"] .bg-\[\#0a1120\] {
+  background-color: #F1F5F9 !important;
+}
+[data-theme="light"] .bg-\[\#1E293B\] {
+  background-color: #FFFFFF !important;
+}
+[data-theme="light"] .bg-\[\#1E293B\]\/80 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+[data-theme="light"] .bg-\[\#1E293B\]\/50 {
+  background-color: rgba(241, 245, 249, 0.7) !important;
+}
+[data-theme="light"] .bg-\[\#1E293B\]\/30 {
+  background-color: rgba(241, 245, 249, 0.5) !important;
+}
+[data-theme="light"] .bg-\[\#0F172A\]\/95 {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+}
+
+/* --- Borders → light borders --- */
+[data-theme="light"] .border-white\/5,
+[data-theme="light"] .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* --- White/opacity backgrounds → subtle light tones --- */
+[data-theme="light"] .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+[data-theme="light"] .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+[data-theme="light"] .hover\:bg-white\/5:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+[data-theme="light"] .hover\:bg-white\/10:hover {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* --- Shadows --- */
+[data-theme="light"] .shadow-black\/20 {
+  --tw-shadow-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* --- Service cards & surfaces with border --- */
+[data-theme="light"] .bg-\[\#1E293B\]\/80,
+[data-theme="light"] .bg-\[\#1E293B\] {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* --- Hero section --- */
+[data-theme="light"] .hero-bg-pulse {
+  animation: radialPulseLight 6s ease-in-out infinite;
+}
+
+@keyframes radialPulseLight {
+  0%, 100% {
+    background: radial-gradient(ellipse at 50% 40%, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+  }
+  50% {
+    background: radial-gradient(ellipse at 50% 40%, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+  }
+}
+
+/* --- Gradient orbs in hero (tone down in light) --- */
+[data-theme="light"] .bg-\[\#2563EB\]\/10 {
+  background-color: rgba(37, 99, 235, 0.08) !important;
+}
+[data-theme="light"] .bg-\[\#3B82F6\]\/8 {
+  background-color: rgba(59, 130, 246, 0.06) !important;
+}
+
+/* --- Mobile bottom bar --- */
+[data-theme="light"] .safe-area-pb,
+[data-theme="light"] .bg-\[\#0F172A\]\/95.backdrop-blur-xl {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+}
+/* Keep mobile bar button text white */
+[data-theme="light"] .bg-\[\#1E293B\].text-white,
+[data-theme="light"] .bg-\[\#22C55E\].text-white,
+[data-theme="light"] .bg-\[\#2563EB\].text-white {
+  color: #FFFFFF !important;
+}
+
+/* --- Review cards --- */
+[data-theme="light"] .bg-\[\#1E293B\]\/60 {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* --- Footer text --- */
+[data-theme="light"] footer .text-\[\#94A3B8\] {
+  color: #64748B !important;
+}
+[data-theme="light"] footer .hover\:text-white:hover {
+  color: #0F172A !important;
+}
+
+/* --- Form inputs --- */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  border-color: #E2E8F0;
+}
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #94A3B8;
+}
+
+/* --- Glow shadow (soften in light) --- */
+[data-theme="light"] .glow-shadow {
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2), 0 0 30px rgba(37, 99, 235, 0.08);
+}
+[data-theme="light"] .glow-shadow:hover {
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3), 0 0 40px rgba(37, 99, 235, 0.12);
+}
+
+/* --- Ensure accent-colored text stays visible --- */
+[data-theme="light"] .text-\[\#3B82F6\] {
+  color: #2563EB !important;
+}
+[data-theme="light"] .text-\[\#2563EB\] {
+  color: #1D4ED8 !important;
+}
+[data-theme="light"] .text-\[\#22C55E\] {
+  color: #16A34A !important;
+}
+
+/* --- Keep colored backgrounds' text white --- */
+[data-theme="light"] .bg-gradient-to-br.from-\[\#2563EB\] {
+  color: #FFFFFF !important;
+}
+
+/* --- Transition for smooth theme change --- */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body, header, footer, main, section, div, nav {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
