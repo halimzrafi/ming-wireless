@@ -20,12 +20,12 @@ export function RepairTracker() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-[#3B82F6] text-sm font-semibold tracking-wider uppercase">Coming Soon</span>
+          <span className="text-[#3B82F6] text-sm font-semibold tracking-wider uppercase">Real-Time Updates</span>
           <h2 className="text-3xl sm:text-4xl font-black mt-2 tracking-tight">
             Track Your Repair <span className="text-[#2563EB]">Live</span>
           </h2>
           <p className="text-[#94A3B8] mt-3 max-w-lg mx-auto">
-            Your device, tracked live — from drop-off to done. Get real-time status updates on your repair.
+            Your device, tracked live — from drop-off to done. Get real-time status updates via SMS and our online portal.
           </p>
         </motion.div>
 

@@ -89,44 +89,71 @@ function generateSpriteFrames(count: number): HTMLCanvasElement[] {
       ctx.fillRect(30, 60, 300, 600);
     }
 
-    // Screen content (appears as repair progresses)
-    if (progress > 0.6) {
-      const contentOpacity = (progress - 0.6) * 2.5;
+    // Screen content (appears as repair progresses) — pristine brand-new phone look
+    if (progress > 0.5) {
+      const contentOpacity = Math.min(1, (progress - 0.5) * 2);
+
+      // Vibrant wallpaper gradient
+      const wallGrad = ctx.createLinearGradient(30, 60, 330, 660);
+      wallGrad.addColorStop(0, `rgba(37, 99, 235, ${contentOpacity * 0.5})`);
+      wallGrad.addColorStop(0.4, `rgba(99, 102, 241, ${contentOpacity * 0.4})`);
+      wallGrad.addColorStop(0.7, `rgba(139, 92, 246, ${contentOpacity * 0.35})`);
+      wallGrad.addColorStop(1, `rgba(15, 23, 42, ${contentOpacity * 0.6})`);
+      ctx.fillStyle = wallGrad;
+      ctx.beginPath();
+      ctx.roundRect(30, 60, 300, 600, 16);
+      ctx.fill();
 
       // Status bar
-      ctx.fillStyle = `rgba(148, 163, 184, ${contentOpacity})`;
-      ctx.font = "12px system-ui";
-      ctx.fillText("9:41", 50, 85);
-      ctx.fillText("100%", 280, 85);
+      ctx.fillStyle = `rgba(248, 250, 252, ${contentOpacity})`;
+      ctx.font = "bold 13px system-ui";
+      ctx.fillText("9:41", 50, 86);
+      ctx.fillText("100%", 275, 86);
 
-      // App icons grid
-      const iconColors = ["#2563EB", "#22C55E", "#EF4444", "#F59E0B", "#8B5CF6", "#EC4899"];
-      for (let row = 0; row < 3; row++) {
-        for (let col = 0; col < 3; col++) {
+      // WiFi / signal dots
+      ctx.fillStyle = `rgba(248, 250, 252, ${contentOpacity * 0.8})`;
+      for (let d = 0; d < 4; d++) {
+        ctx.beginPath();
+        ctx.roundRect(250 + d * 6, 80 - d * 2, 4, 4 + d * 2, 1);
+        ctx.fill();
+      }
+
+      // Time widget
+      ctx.fillStyle = `rgba(248, 250, 252, ${contentOpacity})`;
+      ctx.font = "bold 52px system-ui";
+      ctx.textAlign = "center";
+      ctx.fillText("9:41", 180, 190);
+      ctx.font = "16px system-ui";
+      ctx.fillStyle = `rgba(203, 213, 225, ${contentOpacity})`;
+      ctx.fillText("Saturday, March 15", 180, 218);
+      ctx.textAlign = "start";
+
+      // App icons grid — 4 columns × 4 rows
+      const iconColors = ["#2563EB", "#22C55E", "#EF4444", "#F59E0B", "#8B5CF6", "#EC4899", "#06B6D4", "#F97316",
+                          "#10B981", "#6366F1", "#E11D48", "#FBBF24", "#14B8A6", "#A855F7", "#FB923C", "#3B82F6"];
+      for (let row = 0; row < 4; row++) {
+        for (let col = 0; col < 4; col++) {
+          const ix = 52 + col * 68;
+          const iy = 270 + row * 80;
           ctx.beginPath();
-          ctx.roundRect(
-            65 + col * 90,
-            140 + row * 100,
-            60,
-            60,
-            14
-          );
-          ctx.fillStyle = `rgba(${hexToRgb(iconColors[(row * 3 + col) % iconColors.length])}, ${contentOpacity * 0.8})`;
+          ctx.roundRect(ix, iy, 52, 52, 12);
+          ctx.fillStyle = `rgba(${hexToRgb(iconColors[row * 4 + col])}, ${contentOpacity * 0.9})`;
           ctx.fill();
         }
       }
-    }
 
-    // Success checkmark at the end
-    if (progress > 0.95) {
-      ctx.strokeStyle = "#22C55E";
-      ctx.lineWidth = 4;
-      ctx.lineCap = "round";
+      // Dock at bottom
       ctx.beginPath();
-      ctx.moveTo(150, 380);
-      ctx.lineTo(175, 410);
-      ctx.lineTo(220, 350);
-      ctx.stroke();
+      ctx.roundRect(50, 600, 260, 50, 20);
+      ctx.fillStyle = `rgba(255, 255, 255, ${contentOpacity * 0.1})`;
+      ctx.fill();
+      const dockColors = ["#22C55E", "#2563EB", "#EF4444", "#F59E0B"];
+      for (let d = 0; d < 4; d++) {
+        ctx.beginPath();
+        ctx.roundRect(68 + d * 62, 608, 36, 36, 10);
+        ctx.fillStyle = `rgba(${hexToRgb(dockColors[d])}, ${contentOpacity * 0.9})`;
+        ctx.fill();
+      }
     }
 
     // Notch/Dynamic Island
@@ -213,7 +240,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[200vh] bg-[#0F172A]"
+      className="relative min-h-[130vh] bg-[#0F172A]"
     >
       {/* Sticky viewport */}
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden hero-bg-pulse">

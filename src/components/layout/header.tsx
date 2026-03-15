@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS, BUSINESS } from "@/lib/constants";
-import { MuteToggle } from "@/components/ui/mute-toggle";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -64,7 +63,6 @@ export function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-3">
-            <MuteToggle />
             <a
               href={`tel:${BUSINESS.phoneRaw}`}
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-[#94A3B8] hover:text-white transition-colors"
@@ -82,7 +80,6 @@ export function Header() {
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden items-center gap-2">
-            <MuteToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-[#94A3B8] hover:text-white"
